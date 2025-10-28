@@ -51,6 +51,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="k3g-Hx-ZWC" firstAttribute="top" secondItem="mhh-av-btf" secondAttribute="bottom" constant="8" id="1Wj-03-7r8"/>
                             <constraint firstItem="IwD-fg-v3K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="1wS-xN-Cbk"/>
@@ -64,14 +65,23 @@
                             <constraint firstItem="k3g-Hx-ZWC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="paZ-Tf-vXB"/>
                             <constraint firstItem="Lb5-2l-dMe" firstAttribute="top" secondItem="HfD-cY-kxI" secondAttribute="bottom" constant="8" id="u0X-EU-IWv"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="HLC-kH-QEx" appends="YES" id="N8m-5S-OMM"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Convert " image="thermometer.high" catalog="system" id="PC5-0w-5ue"/>
                     <connections>
                         <outlet property="celsiusLabel" destination="HfD-cY-kxI" id="5rg-nU-r6e"/>
+                        <outlet property="textField" destination="IwD-fg-v3K" id="5SU-e3-G0M"/>
                         <outlet property="view" destination="HfD-cY-kxI" id="kUc-gG-35A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="HLC-kH-QEx">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="HhP-cm-cUg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
